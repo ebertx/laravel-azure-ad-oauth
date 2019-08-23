@@ -16,6 +16,7 @@ class AuthController extends Controller
     {
         $user = Socialite::driver('azure-oauth')->user();
 
+        return dd($user);
         $authUser = $this->findOrCreateUser($user);
 
         auth()->login($authUser, true);

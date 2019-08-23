@@ -18,11 +18,11 @@ class AuthController extends Controller
 
 
         if($user['email'] == null){ // the email is null (Not associated with account)
-            if($user['user']['email'] == null){ // the saml email is also not configured
+            if($user['user']['mail'] == null){ // the saml email is also not configured
                 $user['email'] = $user['user']['userPrincipalName'];
-                $user['user']['email'] = $user['user']['userPrincipalName'];
+                $user['user']['mail'] = $user['user']['userPrincipalName'];
             } else {
-                $user['email'] = $user['user']['email'];
+                $user['email'] = $user['user']['mail'];
             }
         }
         $authUser = $this->findOrCreateUser($user);

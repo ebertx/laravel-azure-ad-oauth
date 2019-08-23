@@ -20,7 +20,7 @@ class AzureOauthProvider extends AbstractProvider implements ProviderInterface
 
     protected function getTokenUrl()
     {
-        return 'https://login.microsoftonline.com/common/oauth2/token';
+        return 'https://login.microsoftonline.com/common/oauth2/v2.0/token';
     }
 
     protected function getTokenFields($code)

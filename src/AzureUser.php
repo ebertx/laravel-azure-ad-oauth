@@ -47,7 +47,7 @@ class AzureUser
         $response = $guzzle->post('https://login.microsoftonline.com/common/oauth2/v2.0/token', [
             'form_params' => [
                 'client_id' => config('azure-oath.credentials.client_id'),
-                'scope' => 'user.read openid profile email mail',
+                'scope' => 'user.read openid profile email',
                 'refresh_token' => $this->get()->refreshToken,
                 'redirect_uri' => config('azure-oath.credentials.redirect'),
                 'grant_type' => 'refresh_token',

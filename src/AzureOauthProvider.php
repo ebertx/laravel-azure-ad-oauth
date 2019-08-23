@@ -11,7 +11,7 @@ use Laravel\Socialite\Two\InvalidStateException;
 class AzureOauthProvider extends AbstractProvider implements ProviderInterface
 {
     const IDENTIFIER = 'AZURE_OAUTH';
-    protected $scopes = ['User.Read', 'openid', 'profile', 'email', 'mail'];
+    protected $scopes = ['User.Read', 'openid', 'profile', 'email'];
     protected $scopeSeparator = ' ';
 
     protected function getAuthUrl($state)

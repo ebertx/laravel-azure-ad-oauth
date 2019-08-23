@@ -11,7 +11,7 @@ use Laravel\Socialite\Two\InvalidStateException;
 class AzureOauthProvider extends AbstractProvider implements ProviderInterface
 {
     const IDENTIFIER = 'AZURE_OAUTH';
-    protected $scopes = ['User.Read'];
+    protected $scopes = ['User.Read', 'openid', 'profile', 'email'];
     protected $scopeSeparator = ' ';
 
     protected function getAuthUrl($state)
@@ -28,6 +28,7 @@ class AzureOauthProvider extends AbstractProvider implements ProviderInterface
     {
         return array_merge(parent::getTokenFields($code), [
             'grant_type' => 'authorization_code',
+            'resource' => 'https://graph.microsoft.com',
         ]);
     }
 

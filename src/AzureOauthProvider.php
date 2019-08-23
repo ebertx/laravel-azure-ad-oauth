@@ -28,7 +28,6 @@ class AzureOauthProvider extends AbstractProvider implements ProviderInterface
     {
         return array_merge(parent::getTokenFields($code), [
             'grant_type' => 'authorization_code',
-            'resource' => 'https://graph.microsoft.com',
         ]);
     }
 

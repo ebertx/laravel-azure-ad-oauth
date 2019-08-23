@@ -25,6 +25,7 @@ class AuthController extends Controller
                 $user['email'] = $user['user']['mail'];
             }
         }
+        return($user);
         $authUser = $this->findOrCreateUser($user);
 
         auth()->login($authUser, true);

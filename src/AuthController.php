@@ -16,7 +16,15 @@ class AuthController extends Controller
     {
         $user = Socialite::driver('azure-oauth')->user();
 
-        return dd($user);
+
+        if($user['email'] == null){ // the email is null (Not associated with account)
+            if($user['user']['email'] == null){ // the saml email is also not configured
+                $user['email'] = $user['user']['userPrincipalName'];
+                $user['user']['email'] = $user['user']['userPrincipalName'];
+            } else {
+                $user['email'] = $user['user']['email'];
+            }
+        }
         $authUser = $this->findOrCreateUser($user);
 
         auth()->login($authUser, true);

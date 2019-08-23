@@ -15,14 +15,14 @@ class AuthController extends Controller
     public function handleOauthResponse()
     {
         $user = Socialite::driver('azure-oauth')->user();
-        return($user);
 
-        if($user['email'] == null){ // the email is null (Not associated with account)
-            if($user['user']['mail'] == null){ // the saml email is also not configured
-                $user['email'] = $user['user']['userPrincipalName'];
-                $user['user']['mail'] = $user['user']['userPrincipalName'];
+
+        if($user->email == null){ // the email is null (Not associated with account)
+            if($user->user['mail'] == null){ // the saml email is also not configured
+                $user->email = $user->user['userPrincipalName'];
+                $user->user['mail'] = $user->user['userPrincipalName'];
             } else {
-                $user['email'] = $user['user']['mail'];
+                $user->email = $user->user['mail'];
             }
         }
 

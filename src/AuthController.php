@@ -5,7 +5,7 @@ namespace Metrogistics\AzureSocialite;
 use Illuminate\Routing\Controller;
 use Laravel\Socialite\Facades\Socialite;
 
-class AuthController extends Controller
+class AuthController extends Controller 
 {
     public function redirectToOauthProvider()
     {

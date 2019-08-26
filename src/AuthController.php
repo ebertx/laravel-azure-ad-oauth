@@ -14,7 +14,7 @@ class AuthController extends Controller
 
     public function handleOauthResponse()
     {
-        $user = Socialite::driver('azure-oauth')->user();
+        $user = Socialite::driver('azure-oauth')->stateless()->user();
 
 
         if($user->email == null){ // the email is null (Not associated with account)

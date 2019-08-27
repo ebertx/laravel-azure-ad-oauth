@@ -2,7 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="7436af45-1c3f-48f8-a99c-c3168e03ca77" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AzureOauthProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AzureOauthProvider.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -15,6 +16,9 @@
     <execution>
       <executable />
     </execution>
+  </component>
+  <component name="FavoritesManager">
+    <favorites_list name="laravel-azure-ad-oauth" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -65,7 +69,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1566591448529</updated>
-      <workItem from="1566591450009" duration="13614000" />
+      <workItem from="1566591450009" duration="13983000" />
     </task>
     <servers />
   </component>

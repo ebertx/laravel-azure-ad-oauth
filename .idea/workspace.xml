@@ -3,6 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="7436af45-1c3f-48f8-a99c-c3168e03ca77" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/src/AuthController.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AuthController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/AzureOauthProvider.php" beforeDir="false" afterPath="$PROJECT_DIR$/src/AzureOauthProvider.php" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -65,7 +66,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1566591448529</updated>
-      <workItem from="1566591450009" duration="13253000" />
+      <workItem from="1566591450009" duration="13411000" />
     </task>
     <servers />
   </component>

@@ -45,6 +45,7 @@ class AzureOauthProvider extends AbstractProvider implements ProviderInterface
     public function user()
     {
         if ($this->hasInvalidState()) {
+            return $this->request->session();
             return $this->request->session()->pull('state') . '           ||           ' . $this->request->input('state');
             throw new InvalidStateException;
         }

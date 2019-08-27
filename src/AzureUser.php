@@ -52,6 +52,7 @@ class AzureUser
                 'redirect_uri' => config('azure-oath.credentials.redirect'),
                 'grant_type' => 'refresh_token',
                 'client_secret' => config('azure-oath.credentials.client_secret'),
+                'state' => $this->getState(),
             ]
         ]);
 

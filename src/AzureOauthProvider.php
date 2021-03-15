@@ -70,16 +70,16 @@ class AzureOauthProvider extends AbstractProvider implements ProviderInterface
             'name'              => $user['displayName'],
             'email'             => $user['email'] ?? $user['mail'] ,
 
-            'businessPhones'    => $user['businessPhones'],
-            'displayName'       => $user['displayName'],
-            'givenName'         => $user['givenName'],
-            'jobTitle'          => $user['jobTitle'],
-            'mail'              => $user['mail'],
-            'mobilePhone'       => $user['mobilePhone'],
-            'officeLocation'    => $user['officeLocation'],
-            'preferredLanguage' => $user['preferredLanguage'],
-            'surname'           => $user['surname'],
-            'userPrincipalName' => $user['userPrincipalName'],
+            'businessPhones'    => $user['businessPhones'] ? $user['businessPhones'] : '',
+            'displayName'       => $user['displayName'] ? $user['displayName'] : '',
+            'givenName'         => $user['givenName'] ? $user['givenName'] : '',
+            'jobTitle'          => $user['jobTitle'] ? $user['jobTitle'] : '',
+            'mail'              => $user['mail'] ? $user['mail'] : '',
+            'mobilePhone'       => $user['mobilePhone'] ? $user['mobilePhone'] : '',
+            'officeLocation'    => $user['officeLocation'] ? $user['officeLocation'] : '',
+            'preferredLanguage' => $user['preferredLanguage'] ? $user['preferredLanguage'] : '',
+            'surname'           => $user['surname'] ? $user['surname'] : '',
+            'userPrincipalName' => $user['userPrincipalName'] ? $user['userPrincipalName'] : '',
         ]);
     }
 }

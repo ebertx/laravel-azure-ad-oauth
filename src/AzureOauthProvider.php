@@ -70,16 +70,16 @@ class AzureOauthProvider extends AbstractProvider implements ProviderInterface
             'name'              => $user['displayName'],
             'email'             => $user['email'] ?? $user['mail'] ,
 
-            'businessPhones'    => $user['businessPhones'] ? $user['businessPhones'] : '',
-            'displayName'       => $user['displayName'] ? $user['displayName'] : '',
-            'givenName'         => $user['givenName'] ? $user['givenName'] : '',
-            'jobTitle'          => $user['jobTitle'] ? $user['jobTitle'] : '',
-            'mail'              => $user['mail'] ? $user['mail'] : '',
-            'mobilePhone'       => $user['mobilePhone'] ? $user['mobilePhone'] : '',
-            'officeLocation'    => $user['officeLocation'] ? $user['officeLocation'] : '',
-            'preferredLanguage' => $user['preferredLanguage'] ? $user['preferredLanguage'] : '',
-            'surname'           => $user['surname'] ? $user['surname'] : '',
-            'userPrincipalName' => $user['userPrincipalName'] ? $user['userPrincipalName'] : '',
+            'businessPhones'    => array_key_exists('businessPhones', $user) ? $user['businessPhones'] : '',
+            'displayName'       => array_key_exists('displayName', $user) ? $user['displayName'] : '',
+            'givenName'         => array_key_exists('givenName', $user) ? $user['givenName'] : '',
+            'jobTitle'          => array_key_exists('jobTitle', $user) ? $user['jobTitle'] : '',
+            'mail'              => array_key_exists('mail', $user) ? $user['mail'] : '',
+            'mobilePhone'       => array_key_exists('mobilePhone', $user) ? $user['mobilePhone'] : '',
+            'officeLocation'    => array_key_exists('officeLocation', $user) ? $user['officeLocation'] : '',
+            'preferredLanguage' => array_key_exists('preferredLanguage', $user) ? $user['preferredLanguage'] : '',
+            'surname'           => array_key_exists('surname', $user) ? $user['surname'] : '',
+            'userPrincipalName' => array_key_exists('userPrincipalName', $user) ? $user['userPrincipalName'] : '',
         ]);
     }
 }
